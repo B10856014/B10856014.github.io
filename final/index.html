@@ -98,19 +98,11 @@
     .header {
         background-color: rgba(255, 255, 255, 0);
         color: #ffffff;
-        padding: 15px;
-    }
-    
-    .menu li {
-        padding: 8px;
-        margin-bottom: 10px;
-        background-color: #000000;
-        color: #000000;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        padding: 5px;
     }
     
     .footer {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: #3C3C3C;
         ;
         color: #000000;
         text-align: center;
@@ -234,16 +226,9 @@
         position: relative;
     }
     
-    body,
-    html {
-        height: 100%;
-        font-family: sans-serif;
-    }
-    
     .parallax [class*="bg"] {
         height: 70vh;
         text-indent: -9999px;
-        /* 隠藏文字 */
         background-attachment: fixed;
         background-position: top;
         background-size: cover;
@@ -272,6 +257,10 @@
     .bg5 {
         background-image: url(https://b10856014.github.io/final/CBR1000Rr.jpg);
     }
+    
+    .bg6 {
+        background-image: url(https://b10856014.github.io/final/honda93.jpg);
+    }
 </style>
 
 
@@ -279,49 +268,65 @@
 
     <div class="header">
 
-        <h1>
-            <font face="fantasy" size="7">
-                <p align="center">Honda Motorcycle</p>
-            </font>
-        </h1>
-        <h2>
-            <font face="monospace" size="6.5">
-                <p align="center">"&nbsp;Be Your Wing.&nbsp;"</p>
-            </font>
-        </h2>
-        <h3>
-            <ul class="drop-down-menu">
-                <li>
-                    <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/">⌂.Home</a></font>
-                </li>
+        <div class="parallax">
 
-                <li>
-                    <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">♛.Products</a></font>
-                    <ul>
-                        <li>
-                            <a href="#">Rebel 500</a>
-                        </li>
-                        <li>
-                            <a href="#">CB650R</a>
-                        </li>
-                        <li>
-                            <a href="#">CRF450</a>
-                        </li>
-                    </ul>
+
+            <h1>
+                <font face="fantasy" size="7">
+                    <p align="center">Honda Motorcycle</p>
+                </font>
+            </h1>
+
+            <h2>
+                <ul class="drop-down-menu">
                     <li>
-                        <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/News">✎.News</a></font>
+                        <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/">⌂.Home</a></font>
+                    </li>
+
+                    <li>
+                        <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/Motor">♛.Products</a></font>
+                        <ul>
+                            <li>
+                                <a href="https://moto.honda-taiwan.com.tw/Motor/Rebel500">Rebel 500</a>
+                            </li>
+                            <li>
+                                <a href="https://moto.honda-taiwan.com.tw/Motor/CB650R">CB650R</a>
+                            </li>
+                            <li>
+                                <a href="https://moto.honda-taiwan.com.tw/Motor/FORZA">Froza</a>
+                            </li>
+                        </ul>
                         <li>
-                            <a href="#">◧.Introduction</a>
-                        </li>
-                        <li>
-                            <a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">☎.Contact Method</a>
-                        </li>
-            </ul>
-        </h3>
+                            <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/News">✎.News</a></font>
+                            <li>
+                                <a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">◧.Introduction</a>
+                            </li>
+                            <li>
+                                <a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">☎.Contact Method</a>
+                            </li>
+                </ul>
+                <font>
+                    <p>&nbsp;&nbsp;</p>
+                </font>
+            </h2>
+
+            <h3>
+                <font face="monospace" size="6.5">
+                    <p align="center">"&nbsp;Be Your Wing.&nbsp;"</p>
+                </font>
+            </h3>
+        </div>
     </div>
 
-    <marquee direction="right" height="200" scrollamount="10" behavior="alternate"><img src="logo.jpg" height="200"></marquee>
+
+
+
     <div class="parallax">
+        <font face="monospace" size="6.5" color="#ffffff">
+            <p align="center">✯&nbsp;Pictures&nbsp;✯</p>
+        </font>
+        <div class="bg6">93</div>
+
         <div class="bg1">Rebel 500</div>
 
         <div class="bg2">CB650R</div>
@@ -339,7 +344,7 @@
 
     </div>
 
-
+    <marquee direction="right" height="200" scrollamount="10" behavior="alternate"><img src="logo.jpg" height="200"></marquee>
     <div class="footer">
 
         <font face="fantasy" size="5 ">Copyright &copy 2020 &nbsp;B10856014</font>
