@@ -7,96 +7,17 @@
 
 </head>
 <style>
+    a {
+        text-decoration: none;
+        color: #FF9900;
+    }
+    
     * {
         box-sizing: border-box;
     }
     
-    [class*="col-"] {
-        float: left;
-        padding: 15px;
-        width: 100%;
-    }
-    
-    @media only screen and (min-width:600px) {
-        .col-s-1 {
-            width: 8.33%;
-        }
-        .col-s-2 {
-            width: 16.66%;
-        }
-        .col-s-3 {
-            width: 25%;
-        }
-        .col-s-4 {
-            width: 33.33%;
-        }
-        .col-s-5 {
-            width: 41.66%;
-        }
-        .col-s-6 {
-            width: 50%;
-        }
-        .col-s-7 {
-            width: 58.33%;
-        }
-        .col-s-8 {
-            width: 66.66%;
-        }
-        .col-s-9 {
-            width: 75%;
-        }
-        .col-s-10 {
-            width: 83.33%;
-        }
-        .col-s-11 {
-            width: 91.66%;
-        }
-        .col-s-12 {
-            width: 100%;
-        }
-    }
-    
-    @media only screen and (min-width: 768px) {
-        .col-1 {
-            width: 8.33%;
-        }
-        .col-2 {
-            width: 16.66%;
-        }
-        .col-3 {
-            width: 25%;
-        }
-        .col-4 {
-            width: 33.33%;
-        }
-        .col-5 {
-            width: 41.66%;
-        }
-        .col-6 {
-            width: 50%;
-        }
-        .col-7 {
-            width: 58.33%;
-        }
-        .col-8 {
-            width: 66.66%;
-        }
-        .col-9 {
-            width: 75%;
-        }
-        .col-10 {
-            width: 83.33%;
-        }
-        .col-11 {
-            width: 91.66%;
-        }
-        .col-12 {
-            width: 100%;
-        }
-    }
-    
     .header {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: rgba(0, 0, 0, 0);
         color: #ffffff;
         padding: 5px;
     }
@@ -110,124 +31,190 @@
         padding: 15px;
     }
     
-    img {
-        max-width: 100%;
-        !important height: auto;
+    body {
+        margin: 0px;
     }
-    /* Create four equal columns that floats next to each other */
     
-    .column {
+    .menu {
+        width: 100%;
+        display: flex;
+        background: #272626;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    }
+    
+    .menu li {
         float: left;
-        width: 25%;
-        padding: 20px;
-    }
-    /* Clear floats after the columns */
-    
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    /* On screens that are 992px wide or less, go from four columns to two columns */
-    
-    @media screen and (max-width: 1100px) {
-        .column {
-            width: 50%;
-        }
-    }
-    /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-    
-    @media screen and (max-width: 600px) {
-        .column {
-            width: 100%;
-        }
-    }
-    
-    ul {
-        margin: 0;
-        padding: 0;
         list-style: none;
+        margin: 0px 80px 0px 0px;
+        font-size: 20px;
     }
     
-    ul.drop-down-menu {
-        border: #ccc 1px solid;
-        display: inline-block;
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: 13px;
-    }
-    
-    ul.drop-down-menu li {
-        position: relative;
-        white-space: nowrap;
-        border-right: #ccc 1px solid;
-    }
-    
-    ul.drop-down-menu>li:last-child {
-        border-right: none;
-    }
-    
-    ul.drop-down-menu>li {
-        float: left;
-    }
-    
-    ul.drop-down-menu a {
-        background-color: rgba(255, 255, 255, 0);
-        color: #ffffff;
-        display: block;
-        padding: 0 30px;
+    .menu li a {
         text-decoration: none;
-        line-height: 40px;
+        color: rgb(146, 151, 150);
+        transition: color linear 0.15s;
+        cursor: pointer;
     }
     
-    ul.drop-down-menu a:hover {
-        background-color: gray;
+    .menu .menu-logo {
+        margin: auto;
+        margin-left: 0px;
+        padding: 10px 10px 10px 20px;
+    }
+    
+    .menu .menu-logo a {
         color: #fff;
     }
     
-    ul.drop-down-menu li:hover>a {
-        background-color: gray;
-        color: #fff;
+    .menu a:hover,
+    .menu .current-active a {
+        text-decoration: none;
+        color: #FF9900;
     }
     
-    ul.drop-down-menu ul {
-        border: #ccc 1px solid;
-        position: absolute;
-        z-index: 99;
-        left: -1px;
-        top: 100%;
-        min-width: 180px;
-    }
-    
-    ul.drop-down-menu ul li {
-        border-bottom: #ccc 1px solid;
-    }
-    
-    ul.drop-down-menu ul li:last-child {
-        border-bottom: none;
-    }
-    
-    ul.drop-down-menu ul ul {
-        z-index: 999;
-        top: 10px;
-        left: 90%;
-    }
-    
-    ul.drop-down-menu ul {
+    .toggle-nav,
+    .leftmenu {
         display: none;
     }
     
-    ul.drop-down-menu li:hover>ul {
-        display: block;
+    @media screen and (max-width: 767px) {
+        .box {
+            width: 767px;
+            background-color: green;
+        }
+        .menucontainer {
+            display: flex;
+        }
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .toggle-nav {
+            display: block;
+            position: absolute;
+            left: 4%;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 40px;
+        }
+        .menu .menu-logo {
+            position: relative;
+            left: 40%;
+        }
+        .menu ul {
+            display: none;
+        }
+        .closebtn {
+            position: relative;
+            margin: 16px;
+            left: 80%;
+            font-size: 1em;
+        }
+        .closebtn:hover {
+            cursor: pointer;
+            color: #FF9900;
+        }
+        .leftmenu {
+            display: block;
+            background-color: #272626;
+            color: white;
+            height: 100%;
+            width: 60vw;
+            z-index: 1;
+            position: fixed;
+            left: -100%;
+            transition: all 1s;
+        }
+        .leftmenu.active {
+            position: fixed;
+            top: 0;
+            left: 0%;
+            transition: all 1s;
+        }
+        .leftul li {
+            list-style: none;
+            margin: 32px auto;
+            font-size: 1em;
+        }
+        .leftul li.current-active,
+        .leftul li:hover {
+            color: #FF9900;
+        }
+        .leftul li:hover {
+            cursor: pointer;
+        }
     }
     
-    ul {
-        float: left;
-        left: 25%;
-        position: relative;
+    @media screen and (max-width: 480px) {
+        .box {
+            width: 480px;
+            background-color: blue;
+        }
+        .menucontainer {
+            display: flex;
+        }
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+        .toggle-nav {
+            display: block;
+            position: absolute;
+            left: 4%;
+            color: #ffffff;
+            text-decoration: none;
+            line-height: 40px;
+        }
+        .menu .menu-logo {
+            position: relative;
+            left: 40%;
+        }
+        .menu ul {
+            display: none;
+        }
+        .closebtn {
+            position: relative;
+            margin: 16px;
+            left: 60%;
+            font-size: 1em;
+        }
+        .closebtn:hover {
+            cursor: pointer;
+            color: #FF9900;
+        }
+        .leftmenu {
+            display: block;
+            background-color: #272626;
+            color: white;
+            height: 100%;
+            width: 40vw;
+            z-index: 1;
+            position: fixed;
+            left: -100%;
+            transition: all 1s;
+        }
+        .leftmenu.active {
+            position: fixed;
+            top: 0;
+            left: 0%;
+            transition: all 1s;
+        }
+        .leftul li {
+            list-style: none;
+            margin: 32px auto;
+            font-size: 2em;
+        }
+        .leftul li.current-active,
+        .leftul li:hover {
+            color: #FF9900;
+        }
+        .leftul li:hover {
+            cursor: pointer;
+        }
     }
     
     .parallax [class*="bg"] {
-        height: 70vh;
+        height: 80vh;
         text-indent: -9999px;
         background-attachment: fixed;
         background-position: top;
@@ -235,7 +222,7 @@
     }
     
     .parallax [class*="bg"]:nth-child(2n) {
-        box-shadow: inset 0 0 1em #111;
+        box-shadow: inset 0 0 0.5em #111;
     }
     
     .bg1 {
@@ -261,84 +248,93 @@
     .bg6 {
         background-image: url(https://b10856014.github.io/final/honda93.jpg);
     }
+    
+    .bg7 {
+        background-image: url(https://b10856014.github.io/final/666.png);
+    }
 </style>
 
 
 <body bgcolor="#000000">
-
     <div class="header">
 
-        <div class="parallax">
+        <h1>
+            <div class="menucontainer">
 
+                <div class="leftmenu">
 
-            <h1>
-                <font face="fantasy" size="7">
-                    <p align="center">Honda Motorcycle</p>
-                </font>
-            </h1>
+                    <div class="closebtn">
+                        X
+                    </div>
+                    <ul id="menuUl" class="leftul">
+                        <li class="current-active"><a href="https://moto.honda-taiwan.com.tw/">Home</a></li>
+                        <li><a href="https://moto.honda-taiwan.com.tw/Motor">Products</a></li>
+                        <li><a href="https://moto.honda-taiwan.com.tw/News">News</a></li>
+                        <li><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">Introduction</a></li>
+                        <li><a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">Contact Method</a></li>
+                    </ul>
+                </div>
+                <nav class="menu">
+                    <a id="menubtn" class="toggle-nav" href="#">&#9776;</a>
+                    <div class="menu-logo">
+                        <div class="Img1">
+                            <font face="monospace"><a href="https://b10856014.github.io/final/index.html">Honda Motorcycle</a></div>
+                        </font>
+                    </div>
+                    <ul id="menuUl">
+                        <li class="current-active"><a href="https://moto.honda-taiwan.com.tw/">Home</a></li>
+                        <li><a href="https://moto.honda-taiwan.com.tw/Motor">Products</a></li>
+                        <li><a href="https://moto.honda-taiwan.com.tw/News">News</a></li>
+                        <li><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">Introduction</a></li>
+                        <li><a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">Contact Method</a></li>
+                    </ul>
+                </nav>
 
-            <h2>
-                <ul class="drop-down-menu">
-                    <li>
-                        <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/">⌂.Home</a></font>
-                    </li>
-
-                    <li>
-                        <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/Motor">♛.Products</a></font>
-                        <ul>
-                            <li>
-                                <a href="https://moto.honda-taiwan.com.tw/Motor/Rebel500">Rebel 500</a>
-                            </li>
-                            <li>
-                                <a href="https://moto.honda-taiwan.com.tw/Motor/CB650R">CB650R</a>
-                            </li>
-                            <li>
-                                <a href="https://moto.honda-taiwan.com.tw/Motor/FORZA">Froza</a>
-                            </li>
-                        </ul>
-                        <li>
-                            <font face="monospace" size="4"><a href="https://moto.honda-taiwan.com.tw/News">✎.News</a></font>
-                            <li>
-                                <a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">◧.Introduction</a>
-                            </li>
-                            <li>
-                                <a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">☎.Contact Method</a>
-                            </li>
-                </ul>
-                <font>
-                    <p>&nbsp;&nbsp;</p>
-                </font>
-            </h2>
-
-            <h3>
-                <font face="monospace" size="6.5">
-                    <p align="center">"&nbsp;Be Your Wing.&nbsp;"</p>
-                </font>
-            </h3>
-        </div>
+            </div>
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $('#menubtn').click(function() {
+            $('.leftmenu').toggleClass('active');
+        })
+
+        $('#menuUl li').click(function() {
+            $(this).parent().find('li').each(function() {
+                if ($(this).hasClass('current-active')) {
+                    $(this).toggleClass('current-active');
+                }
+            })
+            $(this).toggleClass('current-active');
+        })
+
+        $('.closebtn').click(function() {
+            $('.leftmenu').toggleClass('active');
+        })
+    </script>
+
+    </h1>
 
 
     <div class="parallax">
-        <font face="monospace" size="6.5" color="#ffffff">
+        <font face="monospace" size="6" color="#ffffff">
             <p align="center">✯&nbsp;Pictures&nbsp;✯</p>
         </font>
-        <div class="bg6">93</div>
+        <div class="bg6" title="93"></div>
 
-        <div class="bg1">Rebel 500</div>
+        <div class="bg1" title="Rebel 500"></div>
 
-        <div class="bg2">CB650R</div>
-
-
-        <div class=" bg3">MSX125</div>
+        <div class="bg2" title="CB650R"></div>
 
 
-        <div class="bg4 ">CRF450</div>
+        <div class="bg3" title="MSX123"></div>
 
 
-        <div class="bg5">CBR1000RR</div>
+        <div class="bg4" title="CRF450RX">CRF450</div>
+
+
+        <div class="bg5" title="CBR1000RR"></div>
 
     </div>
 
