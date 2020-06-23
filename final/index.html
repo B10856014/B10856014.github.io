@@ -7,6 +7,12 @@
 
 </head>
 <style>
+    img {
+        max-width: 100%;
+        /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
+        height: auto;
+    }
+    
     a {
         text-decoration: none;
         color: #FF9900;
@@ -39,7 +45,7 @@
     .menu li {
         float: left;
         list-style: none;
-        margin: 0px 80px 0px 0px;
+        margin: 0px 50px 0px 0px;
         font-size: 20px;
     }
     
@@ -72,10 +78,6 @@
     }
     
     @media screen and (max-width:767px) {
-        .box {
-            width: 767px;
-            background-color: green;
-        }
         .menucontainer {
             display: flex;
         }
@@ -139,11 +141,7 @@
         }
     }
     
-    @media screen and (max-width:767px) {
-        .box {
-            width: 480px;
-            background-color: blue;
-        }
+    @media screen (min-width: 400px) and (max-width: 500px) {
         .menucontainer {
             display: flex;
         }
