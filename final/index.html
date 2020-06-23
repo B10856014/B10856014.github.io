@@ -5,11 +5,34 @@
     <title>期末個人專題</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script type="text/javascript">
+        var URL = document.location.toString();
+        var useragent = navigator.userAgent;
+        useragent = useragent.toLowerCase();
+
+        if (useragent.indexOf('iphone') != -1) location.replace("https://b10856014.github.io/final/m.index.html"); //iphone
+        else if (useragent.indexOf('ipad') != -1 || useragent.indexOf('ipod') != -1) location.replace("https://b10856014.github.io/final/m.index.html"); //ipad
+        else if (useragent.indexOf('android') != -1) {
+            if (ConsiderLimits()) {
+                location.replace("https://b10856014.github.io/final/m.index.html"); // android pad
+            } else {
+                location.replace("https://b10856014.github.io/final/m.index.html"); // android phone
+            }
+        } else {
+            location.replace("https://b10856014.github.io/final/m.index.html"); // PC
+        }
+
+        function ConsiderLimits() {
+            if (screen.width >= 1024 && screen.height >= 600)
+                return 1;
+            return 0;
+        }
+    </script>
+
 </head>
 <style>
     img {
         max-width: 100%;
-        /*不使用width:100% 是因避免圖片解析度不好，隨父元素被放大時會糊掉*/
         height: auto;
     }
     
@@ -141,7 +164,7 @@
         }
     }
     
-    @media screen (min-width: 400px) and (max-width: 500px) {
+    @media screen and (min-width: 400px) and (max-width: 500px) {
         .menucontainer {
             display: flex;
         }
@@ -202,37 +225,6 @@
         }
         .leftul li:hover {
             cursor: pointer;
-        }
-        .parallax [class*="bg"] {
-            height: 80vh;
-            text-indent: -9999px;
-            background-attachment: fixed;
-            background-position: top;
-            background-size: cover;
-        }
-        .parallax [class*="bg"]:nth-child(2n) {
-            box-shadow: inset 0 0 0.5em #111;
-        }
-        .bg1 {
-            background-image: url(https://b10856014.github.io/final/rebel500.jpeg);
-        }
-        .bg2 {
-            background-image: url(https://b10856014.github.io/final/CB650R.jpg);
-        }
-        .bg3 {
-            background-image: url(https://b10856014.github.io/final/MSX125.jpg);
-        }
-        .bg4 {
-            background-image: url(https://b10856014.github.io/final/CRF450RX.jpg);
-        }
-        .bg5 {
-            background-image: url(https://b10856014.github.io/final/CBR1000Rr.jpg);
-        }
-        .bg6 {
-            background-image: url(https://b10856014.github.io/final/honda93.jpg);
-        }
-        .bg7 {
-            background-image: url(https://b10856014.github.io/final/666.png);
         }
     }
     
@@ -307,6 +299,7 @@
                 </li>
 
             </ul>
+            <img src="http://b10856014.github.io/final/666.png" height="200">
 
         </div>
 
@@ -372,29 +365,38 @@
 
     <div class="parallax">
 
-        <div class="bg6"></div>
+        <a href="https://www.motogp.com/">
+            <div class="bg6"></div>
+        </a>
 
-        <div class="bg1" title="Rebel 500"></div>
+        <a href="https://moto.honda-taiwan.com.tw/Motor/Rebel500">
+            <div class="bg1" title="Rebel 500"></div>
+        </a>
 
-        <div class="bg2" title="CB650R"></div>
-
-
-        <div class="bg3" title="MSX123"></div>
-
-
-        <div class="bg4" title="CRF450RX">CRF450</div>
+        <a href="https://moto.honda-taiwan.com.tw/Motor/CB650R">
+            <div class="bg2" title="CB650R"></div>
+        </a>
 
 
-        <div class="bg5" title="CBR1000RR"></div>
+        <a href="https://moto.honda-taiwan.com.tw/Motor/MSX125">
+            <div class="bg3" title="MSX123"></div>
+        </a>
+
+
+        <a href="https://powersports.honda.com/off-road/competition/crf450rx">
+            <div class="bg4" title="CRF450RX"></div>
+        </a>
+
+
+        <a href="https://powersports.honda.com/street/supersport/cbr1000rr">
+            <div class="bg5" title="CBR1000RR"></div>
+        </a>
 
     </div>
 
-    <marquee direction="right" height="200" scrollamount="10" behavior="alternate">
-        <img src="logo.jpg" height="200">
-    </marquee>
+
 
     <div class="footer">
-
         <font face="fantasy" size="5 ">Copyright &copy 2020 &nbsp;B10856014</font>
     </div>
 
