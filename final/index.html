@@ -134,7 +134,7 @@
         .leftul li {
             list-style: none;
             margin: 32px auto;
-            font-size: 1em;
+            font-size: 2em;
         }
         .leftul li.current-active,
         .leftul li:hover {
@@ -256,45 +256,77 @@
 
 
 <body bgcolor="#000000">
-    <div class="header">
 
-        <h1>
-            <div class="menucontainer">
+    <div class="menucontainer">
 
-                <div class="leftmenu">
+        <div class="leftmenu">
 
-                    <div class="closebtn">
-                        X
-                    </div>
-                    <ul id="menuUl" class="leftul">
-                        <li class="current-active"><a href="https://moto.honda-taiwan.com.tw/">Home</a></li>
-                        <li><a href="https://moto.honda-taiwan.com.tw/Motor">Products</a></li>
-                        <li><a href="https://moto.honda-taiwan.com.tw/News">News</a></li>
-                        <li><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">Introduction</a></li>
-                        <li><a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">Contact Method</a></li>
-                    </ul>
-                </div>
-                <nav class="menu">
-                    <a id="menubtn" class="toggle-nav" href="#">&#9776;</a>
-                    <div class="menu-logo">
-                        <div class="Img1">
-                            <font face="monospace"><a href="https://b10856014.github.io/final/index.html">Honda Motorcycle</a></div>
-                        </font>
-                    </div>
-                    <ul id="menuUl">
-                        <li class="current-active"><a href="https://moto.honda-taiwan.com.tw/">Home</a></li>
-                        <li><a href="https://moto.honda-taiwan.com.tw/Motor">Products</a></li>
-                        <li><a href="https://moto.honda-taiwan.com.tw/News">News</a></li>
-                        <li><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">Introduction</a></li>
-                        <li><a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">Contact Method</a></li>
-                    </ul>
-                </nav>
-
+            <div class="closebtn">
+                X
             </div>
+
+            <ul id="menuUl" class="leftul">
+
+                <li class="current-active">
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/">Home</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/Motor">Products</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/News">News</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">Introduction</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">Contact Method</a></font>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <nav class="menu">
+
+            <a id="menubtn" class="toggle-nav" href="#">&#9776;</a>
+
+            <div class="menu-logo">
+
+                <div class="Img1">
+
+                    <font face="monospace" size="6"><a href="https://b10856014.github.io/final/index.html">Honda Motorcycle</a></div>
+                </font>
+            </div>
+
+            <ul id="menuUl">
+
+                <li class="current-active">
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/">Home</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/Motor">Products</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/News">News</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://moto.honda-taiwan.com.tw/About/HondaTaiwan/Philosophy">Introduction</a></font>
+                </li>
+                <li>
+                    <font face="monospace"><a href="https://www.honda-taiwan.com.tw/Auto/About/Contact">Contact Method</a></font>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </div>
 
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <script>
         $('#menubtn').click(function() {
             $('.leftmenu').toggleClass('active');
@@ -314,14 +346,10 @@
         })
     </script>
 
-    </h1>
-
 
     <div class="parallax">
-        <font face="monospace" size="6" color="#ffffff">
-            <p align="center">✯&nbsp;Pictures&nbsp;✯</p>
-        </font>
-        <div class="bg6" title="93"></div>
+
+        <div class="bg6"></div>
 
         <div class="bg1" title="Rebel 500"></div>
 
@@ -338,9 +366,10 @@
 
     </div>
 
-    </div>
+    <marquee direction="right" height="200" scrollamount="10" behavior="alternate">
+        <img src="logo.jpg" height="200">
+    </marquee>
 
-    <marquee direction="right" height="200" scrollamount="10" behavior="alternate"><img src="logo.jpg" height="200"></marquee>
     <div class="footer">
 
         <font face="fantasy" size="5 ">Copyright &copy 2020 &nbsp;B10856014</font>
